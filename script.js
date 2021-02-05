@@ -8,7 +8,7 @@ var toForex;
 // toValue = document.getElementById('fromValue');
 
 const forex = async () => {
-    const response = await fetch('https://api.1forge.com/quotes?pairs=AUD/CNY,AUD/USD,AUD/HKD,AUD/NZD,AUD/JPY,AUD/GBP,AUD/EUR,AUD/CAD,AUD/SGD,USD/CNY&api_key=zBF6K0nRBEioAiN8l1RpxFzX3TmBkOeD');
+    const response = await fetch('https://api.1forge.com/quotes?pairs=AUD/CNY,AUD/USD,AUD/HKD,AUD/NZD,AUD/JPY,AUD/GBP,AUD/EUR,AUD/CAD,AUD/SGD,USD/CNY&api_key=zBF6K0nRBEioAiN8l1RpxFzX3TmBkOe');
     const myJson = await response.json(); //extract JSON from the http response
     // do something with myJson
     console.log(myJson)
