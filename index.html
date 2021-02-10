@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<!-- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            
     <title>Document</title>
 </head>
 <body>
@@ -11,7 +21,7 @@
 
 
     <div class="left-col">
-    <table>
+    <table class="forex-table">
         <tr>
           <th>货币名称</th>
           <th>买入价</th>
@@ -19,61 +29,61 @@
         </tr>
         <!-- 0 -->
         <tr>
-          <td>澳元/人民币</td>
+          <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/人民币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-cn.png" alt=""></span></td>
           <td id="aud-cny-ask"></td>
           <td id="aud-cny-bid"></td>
         </tr>
         <!-- 1 -->
         <tr>
-            <td>澳元/美元</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/美元</span><span><img class="flag-icon flag-icon-right" src="./img/flag-usa.png" alt=""></span></td>
             <td id="aud-usd-ask"></td>
             <td id="aud-usd-bid"></td>
           </tr>
         <!-- 2 -->
           <tr>
-            <td>澳元/港币</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/港币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-hk.png" alt=""></span></td>
             <td id="aud-hkd-ask"></td>
             <td id="aud-hkd-bid"></td>
           </tr>
         <!-- 3 -->
           <tr>
-            <td>澳元/纽币</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/纽币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-nz.png" alt=""></span></td>
             <td id="aud-nzd-ask"></td>
             <td id="aud-nzd-bid"></td>
           </tr>
           <!-- 4 -->
           <tr>
-            <td>澳元/日币</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/日币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-jp.png" alt=""></span></td>
             <td id="aud-jpy-ask"></td>
             <td id="aud-jpy-bid"></td>
           </tr>
           <!-- 5 -->
           <tr>
-            <td>澳元/英镑</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/英镑</span><span><img class="flag-icon flag-icon-right" src="./img/flag-uk.png" alt=""></span></td>
             <td id="aud-gbp-ask"></td>
             <td id="aud-gbp-bid"></td>
           </tr>
           <!-- 6 -->
           <tr>
-            <td>澳元/欧元</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/欧元</span><span><img class="flag-icon flag-icon-right" src="./img/flag-eu.png" alt=""></span></td>
             <td id="aud-eur-ask"></td>
             <td id="aud-eur-bid"></td>
           </tr>
           <!-- 7 -->
           <tr>
-            <td>澳元/加币</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/加币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-ca.png" alt=""></span></td>
             <td id="aud-cad-ask"></td>
             <td id="aud-cad-bid"></td>
           </tr>
           <!-- 8 -->
           <tr>
-            <td>澳元/新币</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/新币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-sg.png" alt=""></span></td>
             <td id="aud-sgd-ask"></td>
             <td id="aud-sgd-bid"></td>
           </tr>
           <!-- 9 -->
           <tr>
-            <td>美元/人民币</td>
+            <td><span><img class="flag-icon flag-icon-left" src="./img/flag-usa.png" alt=""></span><span class="currency-name-container">美元/人民币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-cn.png" alt=""></span></td>
             <td id="usd-cny-ask"></td>
             <td id="usd-cny-bid"></td>
           </tr>
@@ -84,6 +94,14 @@
     <div class="right-col">
         <div class="from-container">
             <p>汇出</p>
+            <input type="text" id="fromValue" placeholder="请输入金额" oninput="getFromValue()">
+
+            <select name="from-select" id="from-select">
+              <option value="1" data-class="avatar" data-style="background-image: url(&apos;http://www.gravatar.com/avatar/b3e04a46e85ad3e165d66f5d927eb609?d=monsterid&amp;r=g&amp;s=16&apos;);">John Resig</option>
+              <option value="2" data-class="avatar" data-style="background-image: url(&apos;http://www.gravatar.com/avatar/e42b1e5c7cfd2be0933e696e292a4d5f?d=monsterid&amp;r=g&amp;s=16&apos;);">Tauren Mills</option>
+              <option value="3" data-class="avatar" data-style="background-image: url(&apos;http://www.gravatar.com/avatar/bdeaec11dd663f26fa58ced0eb7facc8?d=monsterid&amp;r=g&amp;s=16&apos;);">Jane Doe</option>
+            </select>
+
             <select name="" id="fromForex" onchange="getFromForex(this)">
                 <option value="AUD" selected="AUD">澳元</option>
                 <option value="CNY">人民币</option>
@@ -96,10 +114,14 @@
                 <option value="CAD">加元</option>
                 <option value="SGD">新币</option>
             </select>
-            <input type="text" id="fromValue" placeholder="请输入金额" oninput="getFromValue()">
+           
         </div>
         <div class="to-container">
             <p>收到</p>
+
+            <input type="text" id="toValue" placeholder="请输入金额" oninput="getToValue()" onchange="exchangeFromBottomToUp()">
+
+
             <select name="" id="toForex" onchange="getToForex(this)">
                 
                 <option value="AUD" >澳元</option>
@@ -113,11 +135,12 @@
                 <option value="CAD">加元</option>
                 <option value="SGD">新币</option>
             </select>
-            <input type="text" id="toValue" placeholder="请输入金额" oninput="getToValue()">
         </div>
     </div>
 </div>
-
+<script src="./select.js"></script>
     <script src="./script.js"></script>
+
+    <script src="./fromSelect.js"></script>
 </body>
 </html>

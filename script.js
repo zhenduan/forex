@@ -8,7 +8,7 @@ var toForex;
 // toValue = document.getElementById('fromValue');
 
 const forex = async () => {
-    const response = await fetch('https://api.1forge.com/quotes?pairs=AUD/CNY,AUD/USD,AUD/HKD,AUD/NZD,AUD/JPY,AUD/GBP,AUD/EUR,AUD/CAD,AUD/SGD,USD/CNY&api_key=zBF6K0nRBEioAiN8l1RpxFzX3TmBkOe');
+    const response = await fetch('https://api.1forge.com/quotes?pairs=AUD/CNY,AUD/USD,AUD/HKD,AUD/NZD,AUD/JPY,AUD/GBP,AUD/EUR,AUD/CAD,AUD/SGD,USD/CNY&api_key=RnZFGnHhhg2EBdt3YPKH414FYULANNCd');
     const myJson = await response.json(); //extract JSON from the http response
     // do something with myJson
     console.log(myJson)
@@ -57,53 +57,61 @@ const forex = async () => {
 
   forex();
 
-  const exchangeFrom = async () => {
-    fromForex = document.getElementById("fromForex").value;
-    toForex = document.getElementById("toForex").value;
-    const response = await fetch(`https://api.1forge.com/convert?from=${fromForex}&to=${toForex}&quantity=${fromValue}&api_key=zBF6K0nRBEioAiN8l1RpxFzX3TmBkOeD`);
-    const myJson = await response.json(); //extract JSON from the http response
-    document.getElementById("toValue").value = myJson.value;
-    console.log(myJson)
-    console.log("fromForex " + fromForex);
-    console.log("toForex " + toForex);
-    console.log("from value " + fromValue);
 
-  }
-
-  const exchangeTo = async () => {
-    fromForex = document.getElementById("fromForex").value;
-    toForex = document.getElementById("toForex").value;
-    const response = await fetch(`https://api.1forge.com/convert?from=${toForex}&to=${fromForex}&quantity=${toValue}&api_key=zBF6K0nRBEioAiN8l1RpxFzX3TmBkOeD`);
+  // exchange from bottom to up
+  const exchangeFromBottomToUp = async () => {
+    fromForex = document.getElementById("toForex").value;
+    toForex = document.getElementById("fromForex").value;
+    const response = await fetch(`https://api.1forge.com/convert?from=${fromForex}&to=${toForex}&quantity=${toValue}&api_key=RnZFGnHhhg2EBdt3YPKH414FYULANNCd`);
     const myJson = await response.json(); //extract JSON from the http response
     document.getElementById("fromValue").value = myJson.value;
     console.log(myJson)
-    console.log("fromForex " + fromForex);
-    console.log("toForex " + toForex);
-    console.log("from value " + fromValue);
+    // console.log("fromForex " + fromForex);
+    // console.log("toForex " + toForex);
+    // console.log("from value " + fromValue);
+
+  }
+
+  // exchange from top to bottom
+  const exchangeFromUpToBottom = async () => {
+    fromForex = document.getElementById("fromForex").value;
+    toForex = document.getElementById("toForex").value;
+    const response = await fetch(`https://api.1forge.com/convert?from=${fromForex}&to=${toForex}&quantity=${fromValue}&api_key=RnZFGnHhhg2EBdt3YPKH414FYULANNCd`);
+    const myJson = await response.json(); //extract JSON from the http response
+    document.getElementById("toValue").value = myJson.value;
+    console.log(myJson)
+    // console.log("fromForex " + fromForex);
+    // console.log("toForex " + toForex);
+    // console.log("from value " + fromValue);
 
   }
 
   function getFromValue() {
      fromValue = parseInt(document.getElementById('fromValue').value);
-    //   console.log("From:" + fromValue)
-    exchangeFrom();
+       console.log("From value:" + fromValue)
+    // exchangeFrom();
+    exchangeFromUpToBottom();
 
   }
   function getToValue() {
       toValue = document.getElementById('toValue').value;
-      exchangeTo();
-    //   console.log("To" + toValue)
+      // exchangeTo();
+      exchangeFromBottomToUp();
+       console.log("To value" + toValue)
   }
 
   function getFromForex(){
     fromForex = document.getElementById("fromForex").value;
-    exchangeFrom();
-    // console.log("from forex " + fromForex)
+    // exchangeTo();
+    exchangeFromUpToBottom();
+    console.log("from forex " + fromForex)
+
   }
   function getToForex(){
     toForex = document.getElementById("toForex").value;
-    exchangeTo();
-    // console.log("to forex " + toForex)
+    // exchangeFrom();
+    exchangeFromBottomToUp();
+     console.log("to forex " + toForex)
   }
 //   exchange();
 // window.setInterval(function() {
@@ -112,3 +120,7 @@ const forex = async () => {
 //   }, 5000); // 1000 milliseconds (1 second)
 
 // https://api.1forge.com/convert?from=USD&to=EUR&quantity=100&api_key=zBF6K0nRBEioAiN8l1RpxFzX3TmBkOe
+
+function getFromForex2(){
+  console.log(123);
+}
