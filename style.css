@@ -193,10 +193,18 @@ table.forex-table {
   .from-btn-select:focus{
      outline:none;
   }
-  
+
+  /* arrow */
+.fa-chevron-up{
+  color: red;
+  margin-left:8px;
+}
 
   
-  
+.fa-chevron-down{
+  color: green;
+  margin-left:8px;
+}
 
   
 

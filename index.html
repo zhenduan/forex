@@ -11,6 +11,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
             
@@ -30,62 +31,67 @@
         <!-- 0 -->
         <tr>
           <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/人民币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-cn.png" alt=""></span></td>
-          <td id="aud-cny-ask"></td>
-          <td id="aud-cny-bid"></td>
+          <td ><span id="aud-cny-ask"></span><i id="aud-cny-ask-arrow" class=""></i></td>
+          <td><span  id="aud-cny-bid"></span><i id="aud-cny-bid-arrow" class=""></i></td>
         </tr>
         <!-- 1 -->
         <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/美元</span><span><img class="flag-icon flag-icon-right" src="./img/flag-usa.png" alt=""></span></td>
-            <td id="aud-usd-ask"></td>
-            <td id="aud-usd-bid"></td>
+            <td ><span id="aud-usd-ask"></span><i id="aud-usd-ask-arrow" class=""></i></td>
+            <td><span  id="aud-usd-bid"></span><i id="aud-usd-bid-arrow" class=""></i></td>
           </tr>
         <!-- 2 -->
           <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/港币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-hk.png" alt=""></span></td>
-            <td id="aud-hkd-ask"></td>
-            <td id="aud-hkd-bid"></td>
+            <td><span id="aud-hkd-ask"></span><i id="aud-hkd-ask-arrow" class=""></i></td>
+            <td><span  id="aud-hkd-bid"></span><i id="aud-hkd-bid-arrow" class=""></i></td>
           </tr>
         <!-- 3 -->
           <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/纽币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-nz.png" alt=""></span></td>
-            <td id="aud-nzd-ask"></td>
-            <td id="aud-nzd-bid"></td>
+            <td><span id="aud-nzd-ask"></span><i id="aud-nzd-ask-arrow" class=""></i></td>
+            <td><span  id="aud-nzd-bid"></span><i id="aud-nzd-bid-arrow" class=""></i></td>
           </tr>
           <!-- 4 -->
           <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/日币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-jp.png" alt=""></span></td>
-            <td id="aud-jpy-ask"></td>
-            <td id="aud-jpy-bid"></td>
+            <td><span id="aud-jpy-ask"></span><i id="aud-jpy-ask-arrow" class=""></i></td>
+            <td><span id="aud-jpy-bid"></span><i id="aud-jpy-bid-arrow" class=""></i></td>
           </tr>
           <!-- 5 -->
           <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/英镑</span><span><img class="flag-icon flag-icon-right" src="./img/flag-uk.png" alt=""></span></td>
-            <td id="aud-gbp-ask"></td>
-            <td id="aud-gbp-bid"></td>
+            
+            <td><span id="aud-gbp-ask"></span><i id="aud-gbp-ask-arrow" class=""></i></td>
+            <td><span id="aud-gbp-bid"></span><i id="aud-gbp-bid-arrow" class=""></i></td>
           </tr>
           <!-- 6 -->
           <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/欧元</span><span><img class="flag-icon flag-icon-right" src="./img/flag-eu.png" alt=""></span></td>
-            <td id="aud-eur-ask"></td>
-            <td id="aud-eur-bid"></td>
+            
+            <td><span id="aud-eur-ask"></span><i id="aud-eur-ask-arrow" class=""></i></td>
+            <td><span id="aud-eur-bid"></span><i id="aud-eur-bid-arrow" class=""></i></td>
           </tr>
           <!-- 7 -->
           <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/加币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-ca.png" alt=""></span></td>
-            <td id="aud-cad-ask"></td>
-            <td id="aud-cad-bid"></td>
+            
+            <td><span id="aud-cad-ask"></span><i id="aud-cad-ask-arrow" class=""></i></td>
+            <td><span id="aud-cad-bid"></span><i id="aud-cad-bid-arrow" class=""></i></td>
           </tr>
           <!-- 8 -->
           <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-au.png" alt=""></span><span class="currency-name-container">澳元/新币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-sg.png" alt=""></span></td>
-            <td id="aud-sgd-ask"></td>
-            <td id="aud-sgd-bid"></td>
+            
+            <td><span id="aud-sgd-ask"></span><i id="aud-sgd-ask-arrow" class=""></i></td>
+            <td><span id="aud-sgd-bid"></span><i id="aud-sgd-bid-arrow" class=""></i></td>
           </tr>
           <!-- 9 -->
           <tr>
             <td><span><img class="flag-icon flag-icon-left" src="./img/flag-usa.png" alt=""></span><span class="currency-name-container">美元/人民币</span><span><img class="flag-icon flag-icon-right" src="./img/flag-cn.png" alt=""></span></td>
-            <td id="usd-cny-ask"></td>
-            <td id="usd-cny-bid"></td>
+           
+            <td><span id="usd-cny-ask"></span><i id="usd-cny-ask-arrow" class=""></i></td>
+            <td><span id="usd-cny-bid"></span><i id="usd-cny-bid-arrow" class=""></i></td>
           </tr>
        
       </table>
